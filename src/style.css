@@ -1,0 +1,103 @@
+.container {
+  background-color: #ccf6f0;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Merriweather", serif;
+  font-family: "Work Sans", sans-serif;
+}
+.LogoApp {
+  width: 100px;
+  border: solid 1px #fcfafb;
+  border-radius: 15px;
+  background-color: #fcfafb;
+}
+.MinMaxTemp h2 {
+  font-size: 20px;
+}
+.Min,
+.Max {
+  min-width: 100px;
+  min-height: 45px;
+}
+.Min {
+  background-color: #d5def5;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+.Max {
+  background-color: #ff847c;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+.weatherImage img {
+  width: 100px;
+  background-color: white;
+  border-radius: 50%;
+}
+.footer {
+  text-align: center;
+}
+
+.currentTemperature {
+  margin-left: 15px;
+  border-radius: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fcfafb;
+}
+
+.CurrentLocation h3 {
+  padding-top: 5px;
+  font-size: 17px;
+}
+span #minTempForecast,
+span #maxTempForecast {
+  display: inline-flexbox;
+}
+
+.Max,
+.Min {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}
+#minTempForecast {
+  opacity: 0.5;
+}
+
+.card h3 {
+  font-size: 18px;
+}
+.card {
+  min-height: 70px;
+  max-width: 150px;
+  padding: 0;
+  align-items: center;
+}
+.card img {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+
+#celsius,
+#fahr {
+  text-decoration: none;
+}
+
+#celsius:hover,
+#fahr:hover {
+  text-decoration: underline;
+}
+ul {
+  list-style: none;
+}
+
+#currentDate,
+#currentTime {
+  font-size: 18px;
+}

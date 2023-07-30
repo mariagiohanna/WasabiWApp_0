@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/03de6e5eeb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-3 Logo mt-2 mb-2">
+          <img class="LogoApp" src="./images/Logo_1.png" alt="App Logo" />
+        </div>
+        <div class="col">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="text"
+                  id="city-to-search"
+                  class="form-control"
+                  placeholder="Type city here"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-info"
+                  id="submitButton"
+                  value="Search🔍"
+                />
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  id="currentButton"
+                >
+                  Here📍
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr />
+      <div class="row text-center">
+        <div class="col-3" id="FutureDays"></div>
+        <div class="col TempInfo">
+          <div class="row MinMaxTemp text-center align-items-center">
+            <div class="col-3 Min">
+              <h2 id="minTemp">
+                Min temp <br />
+                17°
+              </h2>
+            </div>
+            <div class="col-3 Max">
+              <h2 id="maxTemp">
+                Max temp <br />
+                25°
+              </h2>
+            </div>
+            <div class="col weatherImage text-center">
+              <img
+                src="./images/Sunny.png"
+                alt="Weather image"
+                id="weatherImage"
+              />
+            </div>
+          </div>
+          <div class="row align-items-center pt-4 pb-1">
+            <div class="col currentTemperature text-center">
+              <h2>NOW</h2>
+              <h1 id="currentTemperature">23</h1>
+              <h4>
+                <a href="#" id="celsius"><strong>°C</strong></a>
+                /
+                <a href="#" id="fahr">°F</a>
+              </h4>
+              <h3 id="weatherDescription">Sunny</h3>
+            </div>
+            <div class="col MoreInfo text-center">
+              <ul>
+                <li id="feels_like">Feels like: 20°C</li>
+                <li id="humidity">Humidity: 54%</li>
+                <li id="wind">Wind: 18 km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row text-center pt-5 pb-2">
+            <h2 id="currentLocation">📍Asuncion, Paraguay</h2>
+            <h3 id="currentDate">Saturday, 1st July 2023</h3>
+            <h3 id="currentTime">14:00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        <a href="https://github.com/mariagiohanna/Wasabi-Weather-App">
+          Open-source code
+        </a>
+        by Maria Giohanna
+      </p>
+    </div>
+    <script src="./app/app.js"></script>
+  </body>
+</html>
