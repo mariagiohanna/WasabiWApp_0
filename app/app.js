@@ -106,11 +106,24 @@ function UpdateData2Location(response) {
   feels_like.innerHTML = `Feels like: ${Math.round(
     response.data.main.feels_like
   )}°C`;
-  //``
-  weatherImage.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  let now = new Date();
+  if (now.getHours() > 20 || now.getHours() < 6) {
+    weatherImage.setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.weather[0].description.replace(
+        " ",
+        "-"
+      )}-night.png`
+    );
+  } else {
+    weatherImage.setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.weather[0].description.replace(
+        " ",
+        "-"
+      )}-day.png`
+    );
+  }
 
   getForecastData4Location(response.data.coord);
 }
